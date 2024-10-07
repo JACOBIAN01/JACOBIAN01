@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Subhadeep Ghorai</h1>
 <h3 align="center">A passionate software developer from India</h3>
 
-- 🔭 I’m currently working on [Bioscope](https://github.com/JACOBIAN01/BIOSCOPE)
+- 🔭 I’m currently working on [JavaScript-Mastery](https://github.com/JACOBIAN01/JavaScript-Mastery)
 
 - 🌱 I’m currently learning **React , NodeJS , ExpressJS ,MongoDB ,**
 
-- 👯 I’m looking to collaborate on [MedCare+](https://github.com/JACOBIAN01/Medcare)
+- 👯 I’m looking to collaborate on [Bioscope Prime](https://github.com/JACOBIAN01/bioscope)
 
 - 💬 Ask me about **Python , Java**
 
