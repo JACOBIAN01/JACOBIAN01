@@ -10,7 +10,7 @@ I'm a passionate Software Developer and Global Coding Mentor, combining my love 
 
 ---
 
-## 💻 Projects I’m Proud Of:
+## 💻 Projects:
 🧠 **SmartReviewX** – Full-stack coding project automation  
 → Flask + Selenium + WebSocket + Tailwind CSS  
 → Reduced manual review time by 70%  
