@@ -1,4 +1,4 @@
-# 💫 About Me:
+# About Me:
 👋 Hi there, I'm Subhadeep Ghorai  
 I'm a passionate Software Developer and Global Coding Mentor, combining my love for teaching, problem-solving, and building real-world solutions. With over 2500+ coding sessions delivered and impactful full-stack projects deployed, I strive to create meaningful tech experiences.
 
