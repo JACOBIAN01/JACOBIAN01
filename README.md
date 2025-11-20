@@ -138,30 +138,17 @@
 
 ---
 
-### 🐍 **Animated Contribution Snake**
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JACOBIAN01/JACOBIAN01/output/github-contribution-grid-snake.svg" alt="snake animation"/>
-</p>
 
 ---
 
 ## 👀 **Profile Views Counter**
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=JACOBIAN01&style=for-the-badge&color=blue" />
-  <br/>
-  <img src="https://profile-counter.glitch.me/JACOBIAN01/count.svg" />
 </p>
 
 ---
 
 
-## 🏆 **Trophies**
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=JACOBIAN01&theme=onestar&no-frame=false&no-bg=true&margin-w=4" />
-</p>
-
-
----
 
 ## 💬 **Signature Quote**
 <p align="center">
