@@ -1,5 +1,11 @@
+
 <h1 align="center">👋 Hi, I'm <span style="color:#06B6D4;">Subhadeep Ghorai</span></h1>
-<h3 align="center">🚀 Software Developer | MERN Stack Engineer | Global Coding Mentor</h3>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=2500&pause=1000&color=00C0FF&center=true&vCenter=true&width=500&lines=Full+Stack+Developer;MERN+Stack+Developer;System+Design+Enthusiast;Global+Coding+Mentor;Building+Cool+Stuff+Every+Day!
+"/>
+</p>
+
 
 <p align="center">
   <a href="mailto:subhadeepghorai23@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
@@ -109,15 +115,6 @@
 - 🧠 Finalist, **Smart India Hackathon** & represented **VIT-AP** at **Mark24 Hackathon**  
 - 🎖️ Awarded **Swami Vivekananda Merit-cum-Means Scholarship (2019)**  
 - 📜 Member, **IETE (New Delhi)**  
-
----
-
-<h1 align="center">👋 Hey, I'm Subhadeep Ghorai</h1>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=2500&pause=1000&color=00C0FF&center=true&vCenter=true&width=500&lines=Full+Stack+Developer;Open+Source+Contributor;AI+%26+System+Design+Enthusiast;Building+Cool+Stuff+Every+Day!"/>
-</p>
-
 ---
 
 ## 🚀 **GitHub Analytics & Activity Dashboard**
