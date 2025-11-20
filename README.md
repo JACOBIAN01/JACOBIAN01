@@ -114,21 +114,17 @@
 
 ### 📊 GitHub Stats  
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JACOBIAN01&theme=react&show_icons=true&hide_border=false&count_private=true" height="150"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=JACOBIAN01&theme=react&hide_border=false" height="150"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JACOBIAN01&theme=react&layout=compact&hide_border=false" height="150"/>
-</p>
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=JACOBIAN01&theme=react&show_icons=true&count_private=true&hide_border=false" height="150" /> <img src="https://github-readme-streak-stats.herokuapp.com/?user=JACOBIAN01&theme=react&hide_border=false" height="150" /> </p> <p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JACOBIAN01&theme=react&layout=compact&hide_border=false" height="150" /> </p>
 
 ---
-
+<p align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=JACOBIAN01&theme=react-dark&hide_border=false&area=true" /> </p>
+---
 <p align="center">
   <img src="https://visitcount.itsvg.in/api?id=JACOBIAN01&label=Profile%20Views&color=0&icon=5&pretty=true" alt="Profile Views" />
 </p>
-
 ---
+<p align="center"> <img src="https://raw.githubusercontent.com/JACOBIAN01/JACOBIAN01/output/github-contribution-grid-snake.svg" alt="snake animation" /> </p>
+---
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=JACOBIAN01&style=for-the-badge&color=blue" /> </p>
 
 💬 *“Code with purpose, design with empathy, and build for impact.”* — **Subhadeep Ghorai**
