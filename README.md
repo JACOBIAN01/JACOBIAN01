@@ -112,19 +112,65 @@
 
 ---
 
-### 📊 GitHub Stats  
+<h1 align="center">👋 Hey, I'm Subhadeep Ghorai</h1>
 
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=JACOBIAN01&theme=react&show_icons=true&count_private=true&hide_border=false" height="150" /> <img src="https://github-readme-streak-stats.herokuapp.com/?user=JACOBIAN01&theme=react&hide_border=false" height="150" /> </p> <p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JACOBIAN01&theme=react&layout=compact&hide_border=false" height="150" /> </p>
-
----
-<p align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=JACOBIAN01&theme=react-dark&hide_border=false&area=true" /> </p>
----
 <p align="center">
-  <img src="https://visitcount.itsvg.in/api?id=JACOBIAN01&label=Profile%20Views&color=0&icon=5&pretty=true" alt="Profile Views" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=2500&pause=1000&color=00C0FF&center=true&vCenter=true&width=500&lines=Full+Stack+Developer;Open+Source+Contributor;AI+%26+System+Design+Enthusiast;Building+Cool+Stuff+Every+Day!"/>
 </p>
----
-<p align="center"> <img src="https://raw.githubusercontent.com/JACOBIAN01/JACOBIAN01/output/github-contribution-grid-snake.svg" alt="snake animation" /> </p>
----
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=JACOBIAN01&style=for-the-badge&color=blue" /> </p>
 
-💬 *“Code with purpose, design with empathy, and build for impact.”* — **Subhadeep Ghorai**
+---
+
+## 🚀 **GitHub Analytics & Activity Dashboard**
+
+### 📊 **GitHub Stats**
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=JACOBIAN01&theme=react&show_icons=true&count_private=true&hide_border=false" height="150"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=JACOBIAN01&theme=react&hide_border=false" height="150"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JACOBIAN01&theme=react&layout=compact&hide_border=false" height="150"/>
+</p>
+
+---
+
+### 📈 **Contribution Activity Graph**
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=JACOBIAN01&theme=react-dark&hide_border=false&area=true"/>
+</p>
+
+---
+
+### 🐍 **Animated Contribution Snake**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/JACOBIAN01/JACOBIAN01/output/github-contribution-grid-snake.svg" alt="snake animation"/>
+</p>
+
+---
+
+## 👀 **Profile Views Counter**
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=JACOBIAN01&style=for-the-badge&color=blue" />
+  <br/>
+  <img src="https://profile-counter.glitch.me/JACOBIAN01/count.svg" />
+</p>
+
+---
+
+
+## 🏆 **Trophies**
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=JACOBIAN01&theme=onestar&no-frame=false&no-bg=true&margin-w=4" />
+</p>
+
+
+---
+
+## 💬 **Signature Quote**
+<p align="center">
+  <i>“Code with purpose, design with empathy, and build for impact.”</i><br>
+  — <b>Subhadeep Ghorai</b>
+</p>
+
+---
+
