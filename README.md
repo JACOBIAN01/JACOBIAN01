@@ -101,7 +101,7 @@
 ### 🎓 Education  
 **B.Tech in Electronics & Communication Engineering**  
 📍 *VIT-AP University (2022–2026)*  
-📈 **CGPA:** 8.17  
+📈 **CGPA:** 8.37  
 
 ---
 
