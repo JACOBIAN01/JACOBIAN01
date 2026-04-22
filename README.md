@@ -15,17 +15,6 @@
 
 ---
 
-### 💖 Support My Work
-
-If you find my projects helpful or inspiring, consider sponsoring to support open-source development and education.
-
-<p align="center">
-  <a href="https://github.com/sponsors/JACOBIAN01">
-    <img src="https://img.shields.io/badge/Sponsor-GitHub-%23ea4aaa?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</p>
-
-
 ---
 
 ### 👨‍💻 About Me
