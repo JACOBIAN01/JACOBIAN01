@@ -53,9 +53,6 @@ I'm currently a **Software Engineer at Newton School of Technology**, building A
 ####  [jana-academy-web](https://github.com/JACOBIAN01/jana-academy-web) — *In Progress*
 > Full-stack learning platform, currently in active development.
 
-####  [Leety](https://github.com/JACOBIAN01/Leety) — *the fun one*
-> An autonomous pipeline that fetches LeetCode's daily challenge, hands it to Gemini, submits the solution, watches the judge, self-corrects on failure, and emails you the result — all before your coffee's ready.
-
 ####  [LifeDrop](https://github.com/JACOBIAN01/LifeDrop)
 > Full-stack blood donation platform with role-based access and real-time donor-recipient matching.
 
