@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm <span style="color:#06B6D4;">Subhadeep Ghorai</span> 👋</h1>
+<h1 align="center">Hi, I'm <span style="color:#06B6D4;">Subhadeep Ghorai</span> </h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=2500&pause=1000&color=00C0FF&center=true&vCenter=true&width=650&lines=Software+Engineer+%40+Newton+School+of+Technology;System+Design+Educator+%7C+300%2B+Engineers+Mentored;Building+AI+Agents+on+the+MERN+Stack;Exploring+Cloud+%26+DevSecOps+with+AI"/>
@@ -13,7 +13,7 @@
 
 ---
 
-### 👨‍💻 About Me
+### About Me
 
 Most engineers ship code. Fewer can explain *why it works* to someone learning from scratch — and that difference shows up in code review, in architecture decisions, in how a team actually learns from its mistakes.
 
@@ -27,16 +27,16 @@ I'm currently a **Software Engineer at Newton School of Technology**, building A
 
 ---
 
-### 💼 Experience
+### Experience
 
 **Software Engineer — Newton School of Technology**
-📅 *Dec 2025 – Present*
+ *Dec 2025 – Present*
 - Built and deployed AI-agent-powered evaluation systems (`RepoScore-V2`, `WAP-Agent`), automating workflows that previously cost 50+ hours/month.
 - Delivered 100+ System Design & OOP lectures across 3 engineering cohorts — 300+ engineers, **91.55% CSAT, 4.44/5 rating**.
 - Reviewed 150+ GitHub PRs, resolved 99+ technical grievances, and ran 30+ mock interviews.
 
 **Senior Coding Instructor — Codingal**
-📅 *Dec 2023 – Jan 2026*
+ *Dec 2023 – Jan 2026*
 - Mentored 100+ students across 10+ countries through 2,500+ live coding sessions in Java, Python, AI, and Web Dev.
 - Achieved a 4.7/5 average rating and 80% renewal rate.
 
@@ -58,7 +58,7 @@ I'm currently a **Software Engineer at Newton School of Technology**, building A
 
 ---
 
-### ⚙️ Tech Stack
+###  Tech Stack
 
 **Languages:**
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
@@ -106,14 +106,14 @@ I'm currently a **Software Engineer at Newton School of Technology**, building A
 
 ---
 
-### 🎓 Education
+###  Education
 
 **B.Tech, Electronics & Communication Engineering**
 Vellore Institute of Technology, AP · *Aug 2022 – Sep 2026*
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=JACOBIAN01&theme=react&show_icons=true&count_private=true&hide_border=false" height="150"/>
