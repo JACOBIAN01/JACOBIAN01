@@ -1,0 +1,9 @@
+{
+  "name": "profile-assets",
+  "private": true,
+  "description": "Font and icon sources for build_assets.py",
+  "dependencies": {
+    "@fontsource/inter": "^5.0.0",
+    "simple-icons": "^16.0.0"
+  }
+}

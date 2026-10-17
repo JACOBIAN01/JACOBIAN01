@@ -1,0 +1,38 @@
+name: Contribution animation
+
+# Regenerates the palette-matched contribution animation shown in the README's
+# Activity section and publishes it to the `output` branch, so the profile never
+# depends on an outside image service.
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/contribution-animation.yml
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-light.svg?color_snake=#4F46E5&color_dots=#EEF2FA,#C7D2FE,#93B4FB,#6366F1,#4338CA
+            dist/snake-dark.svg?color_snake=#22D3EE&color_dots=#161B26,#0E3A4A,#0E7490,#06B6D4,#67E8F9
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "Update contribution animation"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
