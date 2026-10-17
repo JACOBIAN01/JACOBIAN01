@@ -20,7 +20,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/build-dark.svg">
-  <img src="assets/build-light.svg" width="100%" alt="AI agents in production: LLM pipelines built on Claude, the GitHub API and Google Sheets that replace 50+ hours a month of manual grading. Real-time systems: React, TypeScript, Node.js, MongoDB, Redis and Socket.io, running in production. Developer tools: tools that make hard concepts visible, shaped by 2,500+ live teaching sessions.">
+  <img src="assets/build-light.svg" width="100%" alt="AI-native engineering: Claude Code as a collaborator, guided by encoded engineering rules; shipped ADCMS to 642 users and SQL Heist City in 14 days. Real-time systems: React, TypeScript, Node.js, MongoDB, Redis and WebSockets, running in production. Developer tools: tools that make hard concepts visible, shaped by 2,500+ live teaching sessions.">
 </picture>
 
 <br><br>
@@ -45,30 +45,30 @@
 
 <br>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-adcms-dark.svg">
+  <img src="assets/project-adcms-light.svg" width="100%" alt="ADCMS, an internal platform at Newton School of Technology. A course management platform that tracks student projects against tamper-proof GitHub commit history, with automated syncs three times a week. 642 users, 3 campuses, 2,967 commits captured, 99.6% sync success. React, Express, MongoDB, GitHub API, Google Sheets API, GitHub Actions.">
+</picture>
+
+Internal platform at Newton School of Technology, so the source isn't public.
+
+<br>
+
+<a href="https://github.com/JACOBIAN01/SQL-Heist-City"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-sqlheist-dark.svg">
+  <img src="assets/project-sqlheist-light.svg" width="100%" alt="SQL Heist City, a multiplayer game built AI-native. A browser game that teaches SQL: every vault, heal and weapon costs a query while other players hunt you. Server-authoritative netcode, a locked-down SQLite grading sandbox and a versioned admin backend. 2.2 KB/s per client, down from 41; 9.1 ms p99 tick at 100 clients; built in 14 days. TypeScript, Three.js, WebSockets, Express, PostgreSQL, React.">
+</picture></a>
+
+**[Repository](https://github.com/JACOBIAN01/SQL-Heist-City)**
+
+<br>
+
 <a href="https://github.com/JACOBIAN01/jana-academy-web"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-jana-dark.svg">
   <img src="assets/project-jana-light.svg" width="100%" alt="Jana Academy, live in production. A production platform with a Socket.io multiplayer quiz arena, server-side RS256 verification of Firebase tokens, Redis caching with stale fallback, and self-hosted analytics with Core Web Vitals. React, TypeScript, Express, MongoDB, Redis, Socket.io.">
 </picture></a>
 
 **[Repository](https://github.com/JACOBIAN01/jana-academy-web)** · **[Live site](https://jana-academy.vercel.app)**
-
-<br>
-
-<a href="https://github.com/JACOBIAN01/Repo-Score-V2"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/project-reposcore-dark.svg">
-  <img src="assets/project-reposcore-light.svg" width="100%" alt="RepoScore, an AI agent. An AI grading agent with three pipelines for project repos, case studies and coding streaks. It scores 300+ student submissions per run with Claude and platform APIs, then writes feedback to Google Sheets. Node.js, Claude API, GitHub GraphQL, Google Sheets API.">
-</picture></a>
-
-**[Repository](https://github.com/JACOBIAN01/Repo-Score-V2)**
-
-<br>
-
-<a href="https://github.com/JACOBIAN01/LifeDrop"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/project-lifedrop-dark.svg">
-  <img src="assets/project-lifedrop-light.svg" width="100%" alt="LifeDrop, live demo. A blood donation platform for users, donors, hospitals and admins, with role-based access, a real-time request feed, and WhatsApp alerts to matching donors through Cloud Functions and Twilio. React, Express, Firestore, Firebase Auth, Twilio.">
-</picture></a>
-
-**[Repository](https://github.com/JACOBIAN01/LifeDrop)** · **[Live demo](https://life-drop-xi.vercel.app)**
 
 <br><br>
 

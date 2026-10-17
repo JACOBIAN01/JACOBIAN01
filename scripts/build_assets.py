@@ -333,11 +333,11 @@ def icon_loop(t):
 
 
 BUILD = [
-    ("AI agents in production",
-     "LLM pipelines built on Claude, the GitHub API and Google Sheets that replace 50+ hours a month of manual grading.",
+    ("AI-native engineering",
+     "Claude Code as a collaborator, guided by encoded engineering rules. Shipped ADCMS to 642 users and SQL Heist City in 14 days.",
      icon_agent),
     ("Real-time systems",
-     "React, TypeScript, Node.js, MongoDB, Redis and Socket.io, running in production for real users.",
+     "React, TypeScript, Node.js, MongoDB, Redis and WebSockets, running in production for real users.",
      icon_flow),
     ("Developer tools",
      "Tools that make hard concepts visible, shaped by 2,500+ live teaching sessions.",
@@ -364,7 +364,7 @@ def build_cards(t):
             body.append(T(x + 28, 180 + j * 27, line, 17, 500, t["muted"]))
         body.append("</g>")
     d.append("</defs>")
-    return svg(W, H, "".join(d + body), "What I build: AI agents in production, real-time systems, developer tools", css)
+    return svg(W, H, "".join(d + body), "What I build: AI-native engineering, real-time systems, developer tools", css)
 
 
 # --------------------------------------------------------- project cards ----
@@ -372,25 +372,31 @@ PROJECTS = [
     ("eventloop", "01", "EventLoop Studio", "VS Code Marketplace",
      "A VS Code extension that runs your own JavaScript in a sandboxed Node vm and replays the Call Stack, "
      "Heap, microtasks, timers and the six libuv phases step by step. Real execution, not a canned animation.",
-     ["TypeScript", "VS Code API", "React", "Node vm", "acorn"]),
-    ("jana", "02", "Jana Academy", "Live in production",
+     ["TypeScript", "VS Code API", "React", "Node vm", "acorn"], []),
+    ("adcms", "02", "ADCMS", "Internal platform · Newton School of Technology",
+     "A course management platform that tracks student projects against tamper-proof GitHub commit history. "
+     "Its first user signed in three days after the first commit, and it syncs every repository automatically "
+     "three times a week. Built AI-native with Claude Code.",
+     ["React", "Express", "MongoDB", "GitHub API", "Google Sheets API", "GitHub Actions"],
+     [("642", "users"), ("3", "campuses"), ("2,967", "commits captured"), ("99.6%", "sync success")]),
+    ("sqlheist", "03", "SQL Heist City", "Multiplayer game · AI-native build",
+     "A multiplayer browser game that teaches SQL: every vault, heal and weapon costs a query while other "
+     "players hunt you. Server-authoritative netcode, a locked-down SQLite grading sandbox and a versioned "
+     "admin backend.",
+     ["TypeScript", "Three.js", "WebSockets", "Express", "PostgreSQL", "React"],
+     [("2.2 KB/s", "per client, down from 41"), ("9.1 ms", "p99 tick at 100 clients"), ("14 days", "to build")]),
+    ("jana", "04", "Jana Academy", "Live in production",
      "A production platform with a Socket.io multiplayer quiz arena, server-side RS256 verification of "
      "Firebase tokens, Redis caching with stale fallback, and self-hosted analytics with Core Web Vitals.",
-     ["React", "TypeScript", "Express", "MongoDB", "Redis", "Socket.io"]),
-    ("reposcore", "03", "RepoScore", "AI agent",
-     "An AI grading agent with three pipelines for project repos, case studies and coding streaks. It scores "
-     "300+ student submissions per run with Claude and platform APIs, then writes feedback to Google Sheets.",
-     ["Node.js", "Claude API", "GitHub GraphQL", "Google Sheets API"]),
-    ("lifedrop", "04", "LifeDrop", "Live demo",
-     "A blood donation platform for users, donors, hospitals and admins, with role-based access, a real-time "
-     "request feed, and WhatsApp alerts to matching donors through Cloud Functions and Twilio.",
-     ["React", "Express", "Firestore", "Firebase Auth", "Twilio"]),
+     ["React", "TypeScript", "Express", "MongoDB", "Redis", "Socket.io"], []),
 ]
 
 
-def project(t, idx, title, badge, desc, chips):
+def project(t, idx, title, badge, desc, chips, stats=()):
     lines = wrap(desc, 19, 500, 840)
-    H = 164 + len(lines) * 29 + 4 + 30 + 40
+    sy = 164 + len(lines) * 29 + 12 if stats else None
+    chip_y = sy + 52 if stats else 164 + len(lines) * 29 + 4
+    H = chip_y + 30 + 40
     per = 2 * (W - 2) + 2 * (H - 2)
     css = f""".cm{{animation:cm 7s linear infinite}}
 @keyframes cm{{to{{stroke-dashoffset:-{per:.0f}}}}}"""
@@ -417,7 +423,19 @@ def project(t, idx, title, badge, desc, chips):
     for j, line in enumerate(lines):
         body.append(T(44, 164 + j * 29, line, 19, 500, t["muted"]))
     body.append("</g>")
-    cx, cy = 44, 164 + len(lines) * 29 + 4
+    if stats:
+        body.append('<g class="fu" style="animation-delay:.3s">')
+        sx = 44
+        for k, (num, label) in enumerate(stats):
+            if k:
+                body.append(f'<rect x="{sx - 17:.0f}" y="{sy + 8}" width="1" height="22" fill="{t["border"]}" '
+                            f'fill-opacity="{t["border_op"] + 0.08}"/>')
+            body.append(T(sx, sy + 26, num, 22, 800, "url(#acc)"))
+            nw = text_width(num, 22, 800)
+            body.append(T(sx + nw + 8, sy + 26, label, 16, 500, t["muted"]))
+            sx += nw + 8 + text_width(label, 16, 500) + 34
+        body.append("</g>")
+    cx, cy = 44, chip_y
     body.append('<g class="fu" style="animation-delay:.35s">')
     for c in chips:
         cw = text_width(c, 14, 700) + 28
@@ -426,7 +444,10 @@ def project(t, idx, title, badge, desc, chips):
         body.append(T(cx + 14, cy + 20, c, 14, 700, t["text2"]))
         cx += cw + 10
     body.append("</g>")
-    return svg(W, H, "".join(d + body), f"{title}: {desc}", css)
+    alt = f"{title} ({badge}): {desc}"
+    if stats:
+        alt += " " + ", ".join(f"{n} {l}" for n, l in stats) + "."
+    return svg(W, H, "".join(d + body), alt, css)
 
 
 # --------------------------------------------------------- window chrome ----
@@ -559,6 +580,9 @@ def footer(t):
 # ------------------------------------------------------------------- main ---
 def main():
     os.makedirs(OUT, exist_ok=True)
+    for f in os.listdir(OUT):
+        if f.endswith(".svg"):
+            os.remove(os.path.join(OUT, f))
     written = []
     for name, t in THEMES.items():
         written.append(write("hero", name, hero(t)))
@@ -570,8 +594,8 @@ def main():
                                  ("activity", "05", "Activity")]:
             written.append(write(f"section-{slug}", name, section(t, idx, title)))
         written.append(write("build", name, build_cards(t)))
-        for slug, idx, title, badge, desc, chips in PROJECTS:
-            written.append(write(f"project-{slug}", name, project(t, idx, title, badge, desc, chips)))
+        for slug, idx, title, badge, desc, chips, pstats in PROJECTS:
+            written.append(write(f"project-{slug}", name, project(t, idx, title, badge, desc, chips, pstats)))
         written.append(write("window-eventloop", name, window_bar(t)))
         written.append(write("stats", name, stats(t)))
         written.append(write("stack", name, stack(t)))
