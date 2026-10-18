@@ -6,9 +6,9 @@
 </picture>
 
 <p>
-  <a href="https://www.subhadeepghorai.in"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-portfolio-dark.svg"><img src="assets/link-portfolio-light.svg" height="44" alt="Portfolio"></picture></a>
-  <a href="https://www.linkedin.com/in/subhadeep-ghorai/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.svg"><img src="assets/link-linkedin-light.svg" height="44" alt="LinkedIn"></picture></a>
-  <a href="mailto:subhadeepghorai23@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-email-dark.svg"><img src="assets/link-email-light.svg" height="44" alt="Email"></picture></a>
+  <a href="https://www.subhadeepghorai.in"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-portfolio-dark.svg"><img src="assets/link-portfolio-light.svg" height="32" alt="Portfolio"></picture></a>
+  <a href="https://www.linkedin.com/in/subhadeep-ghorai/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.svg"><img src="assets/link-linkedin-light.svg" height="32" alt="LinkedIn"></picture></a>
+  <a href="mailto:subhadeepghorai23@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-email-dark.svg"><img src="assets/link-email-light.svg" height="32" alt="Email"></picture></a>
 </p>
 
 <br>

@@ -257,23 +257,15 @@ LINK_ICONS = {
 
 
 def pill(t, label, icon, primary=False):
-    h = 52
-    w = int(text_width(label, 17, 700) + 92)
-    fg = "#FFFFFF" if primary else t["text"]
-    css = ""
-    d = ["<defs>", accent_grad(t, "acc"),
-         '<linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>'
-         '<stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>'
-         '</linearGradient>',
-         f'<clipPath id="pc"><rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="{h / 2 - 1}"/></clipPath></defs>']
-    if primary:
-        d.append(f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="{h / 2 - 1}" fill="url(#acc)"/>')
-    else:
-        d.append(f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="{h / 2 - 1}" fill="{t["chip_bg"]}" '
-                 f'fill-opacity="{t["chip_op"] + 0.02}" stroke="{t["border"]}" stroke-opacity="{t["border_op"] + 0.06}"/>')
-    d.append(f'<g transform="translate(26 14)">{LINK_ICONS[icon](fg)}</g>')
-    d.append(T(62, 32.5, label, 17, 700, fg))
-    return svg(w, h, "".join(d), label, css)
+    """A compact link button: one flat fill for every button, accent icon, no gradient."""
+    h = 32
+    w = int(text_width(label, 14, 700) + 54)
+    fill = "#161C2B" if t is THEMES["dark"] else "#FFFFFF"
+    d = (f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="8" fill="{fill}" '
+         f'stroke="{t["border"]}" stroke-opacity="{t["border_op"] + 0.08}"/>'
+         f'<g transform="translate(13 8) scale(.667)">{LINK_ICONS[icon](t["a1"])}</g>'
+         + T(37, 21, label, 14, 700, t["text"]))
+    return svg(w, h, d, label)
 
 
 # --------------------------------------------------------- section title ----
