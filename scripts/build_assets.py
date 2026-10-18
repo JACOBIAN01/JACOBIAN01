@@ -170,17 +170,11 @@ def write(name, theme, content):
 def hero(t):
     H = 400
     css = """
-.d1{animation:drift1 22s ease-in-out infinite alternate}
-.d2{animation:drift2 26s ease-in-out infinite alternate}
-.d3{animation:drift3 30s ease-in-out infinite alternate}
-@keyframes drift1{to{transform:translate(120px,40px)}}
-@keyframes drift2{to{transform:translate(-140px,-30px)}}
-@keyframes drift3{to{transform:translate(80px,-50px)}}
 .bar{animation:bar 1.2s cubic-bezier(.2,.7,.2,1) .7s both;transform-box:fill-box;transform-origin:left}
 @keyframes bar{from{transform:scaleX(0)}}
-.orb1{animation:spin 26s linear infinite;transform-origin:950px 205px}
-.orb2{animation:spin 40s linear infinite reverse;transform-origin:950px 205px}
-.orb3{animation:spin 16s linear infinite;transform-origin:950px 205px}
+.orb1{animation:spin 40s linear infinite;transform-origin:950px 205px}
+.orb2{animation:spin 60s linear infinite reverse;transform-origin:950px 205px}
+.orb3{animation:spin 26s linear infinite;transform-origin:950px 205px}
 """
     d = [
         "<defs>",
@@ -203,9 +197,9 @@ def hero(t):
         "</defs>",
         '<g clip-path="url(#c)">',
         f'<rect width="{W}" height="{H}" fill="url(#bg)"/>',
-        '<g class="d1"><circle cx="220" cy="80" r="300" fill="url(#b0)"/></g>',
-        '<g class="d2"><circle cx="1000" cy="360" r="320" fill="url(#b1)"/></g>',
-        '<g class="d3"><circle cx="620" cy="-40" r="260" fill="url(#b2)"/></g>',
+        '<g><circle cx="220" cy="80" r="300" fill="url(#b0)"/></g>',
+        '<g><circle cx="1000" cy="360" r="320" fill="url(#b1)"/></g>',
+        '<g><circle cx="620" cy="-40" r="260" fill="url(#b2)"/></g>',
         f'<rect width="{W}" height="{H}" fill="url(#grid)" mask="url(#m)"/>',
     ]
     # status pill
@@ -239,7 +233,7 @@ def hero(t):
     d.append(f'<g class="orb2"><circle cx="{cx}" cy="{cy - 108}" r="6" fill="{t["a2"]}"/>'
              f'<circle cx="{cx + 76}" cy="{cy + 76}" r="4" fill="{t["a3"]}"/></g>')
     d.append(f'<g class="orb3"><circle cx="{cx + 66}" cy="{cy}" r="5" fill="{t["a3"]}"/></g>')
-    d.append(f'<circle cx="{cx}" cy="{cy}" r="34" fill="url(#acc)" fill-opacity=".18" class="ring"/>')
+    d.append(f'<circle cx="{cx}" cy="{cy}" r="34" fill="url(#acc)" fill-opacity=".14"/>')
     d.append(f'<circle cx="{cx}" cy="{cy}" r="26" fill="url(#acc)"/>')
     d.append(f'<path d="M{cx - 9} {cy - 8}l-8 8 8 8M{cx + 9} {cy - 8}l8 8-8 8" fill="none" '
              f'stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
@@ -266,8 +260,7 @@ def pill(t, label, icon, primary=False):
     h = 52
     w = int(text_width(label, 17, 700) + 92)
     fg = "#FFFFFF" if primary else t["text"]
-    css = """.sh{animation:sh 4.5s ease-in-out infinite}
-@keyframes sh{0%,55%{transform:translateX(-120px)}85%,100%{transform:translateX(420px)}}"""
+    css = ""
     d = ["<defs>", accent_grad(t, "acc"),
          '<linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>'
          '<stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>'
@@ -275,8 +268,6 @@ def pill(t, label, icon, primary=False):
          f'<clipPath id="pc"><rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="{h / 2 - 1}"/></clipPath></defs>']
     if primary:
         d.append(f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="{h / 2 - 1}" fill="url(#acc)"/>')
-        d.append('<g clip-path="url(#pc)"><rect class="sh" x="0" y="0" width="70" height="60" '
-                 'fill="url(#gl)" transform="skewX(-20)"/></g>')
     else:
         d.append(f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="{h / 2 - 1}" fill="{t["chip_bg"]}" '
                  f'fill-opacity="{t["chip_op"] + 0.02}" stroke="{t["border"]}" stroke-opacity="{t["border_op"] + 0.06}"/>')
@@ -291,24 +282,22 @@ def section(t, idx, title):
     tw = text_width(title, 34, 800)
     lx = 64 + 46 + tw + 28
     css = f""".ln{{animation:ln 1.4s cubic-bezier(.2,.7,.2,1) .25s both;transform-box:fill-box;transform-origin:left}}
-@keyframes ln{{from{{transform:scaleX(0)}}}}
-.gd{{animation:gd 5s cubic-bezier(.45,0,.55,1) 1.4s infinite}}
-@keyframes gd{{0%{{transform:translateX(0);opacity:0}}10%{{opacity:1}}90%{{opacity:1}}100%{{transform:translateX({W - lx - 8:.0f}px);opacity:0}}}}"""
+@keyframes ln{{from{{transform:scaleX(0)}}}}"""
     d = ["<defs>", accent_grad(t, "acc"),
          f'<linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="{t["a1"]}" stop-opacity=".9"/>'
          f'<stop offset="1" stop-color="{t["a2"]}" stop-opacity="0"/></linearGradient></defs>',
          f'<g class="fu">{T(64, 55, idx, 18, 700, "url(#acc)")}{T(110, 57, title, 34, 800, t["text"], extra="letter-spacing=\'-0.5\'")}</g>',
          f'<rect class="ln" x="{lx:.0f}" y="44" width="{W - lx:.0f}" height="1.5" fill="url(#fade)"/>',
-         f'<circle class="gd" cx="{lx:.0f}" cy="44.75" r="3" fill="{t["a1"]}"/>']
+]
     return svg(W, H, "".join(d), f"{idx} {title}", css)
 
 
 # --------------------------------------------------------- what I build -----
 def icon_agent(t):
     return (f'<circle cx="32" cy="32" r="18" fill="none" stroke="{t["a1"]}" stroke-opacity=".35" stroke-dasharray="2 4"/>'
-            f'<circle cx="32" cy="32" r="10" fill="{t["a1"]}" fill-opacity=".25" class="ring"/>'
+            f'<circle cx="32" cy="32" r="10" fill="{t["a1"]}" fill-opacity=".25"/>'
             f'<circle cx="32" cy="32" r="7" fill="{t["a1"]}"/>'
-            f'<g class="spin" style="animation-duration:7s;transform-origin:32px 32px">'
+            f'<g class="spin" style="animation-duration:11s;transform-origin:32px 32px">'
             f'<circle cx="50" cy="32" r="3.5" fill="{t["a2"]}"/><circle cx="23" cy="16.4" r="3" fill="{t["a3"]}"/>'
             f'<circle cx="23" cy="47.6" r="3" fill="{t["text2"]}"/></g>')
 
@@ -325,11 +314,11 @@ def icon_flow(t):
 
 def icon_loop(t):
     return (f'<circle cx="32" cy="32" r="18" fill="none" stroke="{t["text"]}" stroke-opacity=".18" stroke-width="3"/>'
-            f'<g class="spin" style="animation-duration:2.6s;transform-origin:32px 32px">'
+            f'<g class="spin" style="animation-duration:4s;transform-origin:32px 32px">'
             f'<circle cx="32" cy="32" r="18" fill="none" stroke="url(#acc)" stroke-width="3" '
             f'stroke-linecap="round" stroke-dasharray="30 84"/>'
             f'<circle cx="50" cy="32" r="3.5" fill="{t["a1"]}"/></g>'
-            f'<circle cx="32" cy="32" r="4" fill="{t["a2"]}" class="pulse"/>')
+            f'<circle cx="32" cy="32" r="4" fill="{t["a2"]}"/>')
 
 
 BUILD = [
@@ -348,7 +337,7 @@ BUILD = [
 def build_cards(t):
     H, gap = 296, 24
     cw = (W - 2 * gap) / 3
-    css = """.pk{animation:pk 1.8s linear infinite}
+    css = """.pk{animation:pk 2.6s linear infinite}
 @keyframes pk{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(20px);opacity:0}}"""
     d = ["<defs>", accent_grad(t, "acc")]
     body = []
@@ -397,24 +386,18 @@ def project(t, idx, title, badge, desc, chips, stats=()):
     sy = 164 + len(lines) * 29 + 12 if stats else None
     chip_y = sy + 52 if stats else 164 + len(lines) * 29 + 4
     H = chip_y + 30 + 40
-    per = 2 * (W - 2) + 2 * (H - 2)
-    css = f""".cm{{animation:cm 7s linear infinite}}
-@keyframes cm{{to{{stroke-dashoffset:-{per:.0f}}}}}"""
+    css = ""
     d = ["<defs>", accent_grad(t, "acc"),
          f'<linearGradient id="num" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["a1"]}" stop-opacity=".55"/>'
          f'<stop offset="1" stop-color="{t["a2"]}" stop-opacity=".05"/></linearGradient>']
     body = [glass(t, 1, 1, W - 2, H - 2, "gc", r=24)]
     d.append("</defs>")
-    # comet light travelling around the border
-    body.append(f'<rect class="cm" x="1" y="1" width="{W - 2}" height="{H - 2}" rx="24" fill="none" '
-                f'stroke="url(#acc)" stroke-width="2" stroke-linecap="round" '
-                f'stroke-dasharray="180 {per - 180:.0f}"/>')
     body.append(T(W - 48, 150, idx, 150, 800, "none", "end",
                   f'stroke="url(#num)" stroke-width="2" letter-spacing="-6"', cls="fi"))
     bw = text_width(badge, 14, 700) + 44
     body.append('<g class="fu" style="animation-delay:.05s">')
     body.append(f'<rect x="44" y="40" width="{bw:.0f}" height="30" rx="15" fill="{t["a1"]}" fill-opacity="{t["tint_op"]}"/>')
-    body.append(f'<circle cx="62" cy="55" r="4" fill="{t["a1"]}" class="pulse"/>')
+    body.append(f'<circle cx="62" cy="55" r="4" fill="{t["a1"]}"/>')
     body.append(T(74, 60, badge, 14, 700, t["a1"]))
     body.append("</g>")
     body.append(f'<g class="fu" style="animation-delay:.15s">'
@@ -546,7 +529,7 @@ def stack(t):
         d.append(f'<g id="row{r}">{"".join(chips)}</g>')
         row_svg = "".join(f'<use href="#row{r}" x="{k * set_w:.0f}"/>' for k in range(reps))
         direction = "" if r == 0 else " reverse"
-        css += (f".mq{r}{{animation:mq{r} {set_w / 28:.0f}s linear infinite{direction}}}"
+        css += (f".mq{r}{{animation:mq{r} {set_w / 18:.0f}s linear infinite{direction}}}"
                 f"@keyframes mq{r}{{to{{transform:translateX(-{set_w:.0f}px)}}}}")
         y = 16 + r * (rh + 12)
         offset = 0 if r == 0 else -set_w / 2
@@ -568,12 +551,11 @@ def footer(t):
             p += f" Q{x0 + length / 4} {y - amp} {x0 + length / 2} {y} T{x0 + length} {y}"
         return p + f" V{H} H0Z"
 
-    css = """.wv1{animation:wv 14s linear infinite}.wv2{animation:wv 20s linear infinite reverse}
-.wv3{animation:wv 28s linear infinite}@keyframes wv{to{transform:translateX(-600px)}}"""
+    css = ""
     d = ["<defs>", accent_grad(t, "acc"), "</defs>",
-         f'<g class="wv3" opacity=".18"><path d="{wave(14, 52, 300)}" fill="{t["a2"]}"/></g>',
-         f'<g class="wv2" opacity=".22"><path d="{wave(10, 70, 200)}" fill="{t["a1"]}"/></g>',
-         f'<g class="wv1" opacity=".9"><path d="{wave(8, 88, 300)}" fill="url(#acc)"/></g>']
+         f'<g opacity=".18"><path d="{wave(14, 52, 300)}" fill="{t["a2"]}"/></g>',
+         f'<g opacity=".22"><path d="{wave(10, 70, 200)}" fill="{t["a1"]}"/></g>',
+         f'<g opacity=".9"><path d="{wave(8, 88, 300)}" fill="url(#acc)"/></g>']
     return svg(W, H, "".join(d), "Footer wave")
 
 
